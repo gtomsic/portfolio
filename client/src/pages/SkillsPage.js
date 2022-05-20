@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { container } from "../utils/animation";
+
+import { container, hoverPulse } from "../utils/animation";
 import Container from "../components/Container";
 
 const skills = [
@@ -61,15 +62,24 @@ const SkillsPage = () => {
                     </h2>
                     <div className="mt-11 grid grid-cols-2 gap-1 md:gap-2 lg:gap-3 md:grid-cols-3 lg:grid-cols-4">
                         {skills.map((skill) => (
-                            <div
+                            <motion.a
+                                href={skill.link}
+                                target="_blank"
+                                rel="noreferrer"
+                                variants={hoverPulse}
+                                whileHover="hover"
                                 key={skill.name}
-                                className="flex flex-col justify-center text-center capitalize bg-primary-dark p-3 rounded-none md:rounded-md"
+                                className="flex flex-col justify-center text-center capitalize bg-primary-dark p-3 rounded-none md:rounded-md cursor-pointer"
                             >
-                                <img src={skill.image} alt={skill.name} />
-                                <h3 className="text-3xl py-3 mb-3">
+                                <img
+                                    src={skill.image}
+                                    alt={skill.name}
+                                    className="cursor-pointer"
+                                />
+                                <h3 className="text-2xl md:text-3xl py-3 mb-3">
                                     {skill.name}
                                 </h3>
-                            </div>
+                            </motion.a>
                         ))}
                     </div>
                 </div>

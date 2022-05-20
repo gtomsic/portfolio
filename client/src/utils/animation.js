@@ -36,6 +36,17 @@ export const pulse = {
     },
 };
 
+export const hoverPulse = {
+    hover: {
+        scale: 1.3,
+        boxShadow: "2px 2px 10px rgb(255, 255, 255)",
+        transition: {
+            duration: 1,
+            ease: "easeOut",
+        },
+    },
+};
+
 export const showDelay = {
     hidden: {
         opacity: 0,
@@ -137,6 +148,27 @@ export const zoomIn = {
             when: "beforeChildren",
             staggerChildren: 0.5,
             duration: 0.5,
+        },
+    },
+};
+
+export const zoomOutIn = {
+    hidden: {
+        opacity: 0,
+        scale: 40,
+        y: "100vh",
+        x: 0,
+    },
+    visible: {
+        opacity: 1,
+        scale: 1,
+        y: 0,
+        x: 0,
+        transition: {
+            ease: "easeInOut",
+            when: "beforeChildren",
+            staggerChildren: 0.1,
+            duration: 0.1,
         },
     },
 };

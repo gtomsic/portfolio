@@ -48,10 +48,10 @@ const BlogItem = ({ post }) => {
                 </div>
                 <div className="flex">
                     <button className="border border-light flex items-center text-white bg-warning hover:bg-secondary duration-300 p-1 px-3 m-2 rounded-full cursor-pointer">
-                        <span className="hidden md:inline-block">Edit</span>
+                        Edit
                     </button>
                     <button className="border border-light flex items-center text-white bg-danger hover:bg-secondary duration-300 p-1 px-3 m-2 rounded-full cursor-pointer">
-                        <span className="hidden md:inline-block">Delete</span>
+                        Delete
                     </button>
                 </div>
             </div>

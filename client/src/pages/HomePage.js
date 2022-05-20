@@ -11,7 +11,7 @@ import {
     pulse,
     container,
     showDelay,
-    dropFromTop,
+    zoomOutIn,
     fromLeft,
 } from "../utils/animation";
 import Container from "../components/Container";
@@ -67,12 +67,21 @@ const HomePage = () => {
                         >
                             GABRIEL TOMSIC
                         </motion.h1>
-                        <motion.h1
-                            variants={dropFromTop}
-                            className="text-4xl md:text-5xl lg:text-7xl text-secondary drop-shadow-md font-bold"
-                        >
-                            FULL STACK DEVELOPER
-                        </motion.h1>
+                        <div className="text-4xl md:text-5xl lg:text-7xl text-secondary drop-shadow-md font-bold flex">
+                            {"FULL STACK DEVELOPER"
+                                .split("")
+                                .map((letter, index) => (
+                                    <motion.div
+                                        variants={zoomOutIn}
+                                        key={index}
+                                        className={
+                                            letter === " " ? "mr-4 md:mr-7" : ""
+                                        }
+                                    >
+                                        {letter}
+                                    </motion.div>
+                                ))}
+                        </div>
                         <h4 className="text-justify drop-shadow-md">
                             Using cutting edge frameworks like javascript,
                             react, redux, node, jsonwebtoken, bcryptjs, mysql,
