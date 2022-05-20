@@ -92,3 +92,43 @@ export const fromRight = {
         },
     },
 };
+
+export const rightZoomIn = {
+    hidden: {
+        x: "100vw",
+        y: -400,
+        scale: 0,
+    },
+    visible: {
+        x: 0,
+        y: 0,
+        scale: 1,
+        transition: {
+            ease: "easeInOut",
+            when: "beforeChildren",
+            staggerChildren: 0.5,
+            duration: 0.5,
+        },
+    },
+};
+
+export const zoomIn = {
+    hidden: {
+        opacity: 0,
+        y: 0,
+        x: 0,
+        scale: 0,
+    },
+    visible: {
+        opacity: 1,
+        y: 0,
+        x: 0,
+        scale: 1,
+        transition: {
+            ease: "easeInOut",
+            when: "beforeChildren",
+            staggerChildren: 0.5,
+            duration: 0.5,
+        },
+    },
+};
