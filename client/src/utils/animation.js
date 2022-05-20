@@ -1,15 +1,3 @@
-export const pulse = {
-    visible: {
-        scale: 1.3,
-        boxShadow: "2px 2px 10px rgb(255, 255, 255)",
-        transition: {
-            duration: 1,
-            repeat: Infinity,
-            ease: "easeOut",
-        },
-    },
-};
-
 export const container = {
     hidden: {
         opacity: 0,
@@ -20,7 +8,7 @@ export const container = {
         x: 0,
         transition: {
             type: "spring",
-            delay: 0.5,
+            delay: 0.1,
             when: "beforeChildren",
             staggerChildren: 0.5,
             duration: 0.5,
@@ -32,6 +20,18 @@ export const container = {
         transition: {
             ease: "easeInOut",
             duration: 0.5,
+        },
+    },
+};
+
+export const pulse = {
+    visible: {
+        scale: 1.3,
+        boxShadow: "2px 2px 10px rgb(255, 255, 255)",
+        transition: {
+            duration: 1,
+            repeat: Infinity,
+            ease: "easeOut",
         },
     },
 };
@@ -98,6 +98,10 @@ export const rightZoomIn = {
         x: "100vw",
         y: -400,
         scale: 0,
+        transition: {
+            duration: 0.5,
+            ease: "easeInOut",
+        },
     },
     visible: {
         x: 0,
@@ -118,6 +122,10 @@ export const zoomIn = {
         y: 0,
         x: 0,
         scale: 0,
+        transition: {
+            duration: 0.5,
+            ease: "easeInOut",
+        },
     },
     visible: {
         opacity: 1,

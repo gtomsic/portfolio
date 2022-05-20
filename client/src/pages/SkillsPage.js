@@ -1,6 +1,50 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { container } from "../utils/animation";
+import Container from "../components/Container";
+
+const skills = [
+    {
+        name: "javascript",
+        link: "https://developer.mozilla.org/en-US/docs/Web/javascript",
+        image: "/images/javascript.jpg",
+    },
+    {
+        name: "react",
+        link: "https://reactjs.org/",
+        image: "/images/react.jpg",
+    },
+    {
+        name: "redux",
+        link: "https://redux.js.org/",
+        image: "/images/redux.jpg",
+    },
+    {
+        name: "node",
+        link: "https://nodejs.org/en/",
+        image: "/images/node.jpg",
+    },
+    {
+        name: "mysql",
+        link: "https://www.mysql.com/",
+        image: "/images/mysql.jpg",
+    },
+    {
+        name: "sequelize",
+        link: "https://sequelize.org/",
+        image: "/images/sequelize.jpg",
+    },
+    {
+        name: "postgresql",
+        link: "https://www.postgresql.org/",
+        image: "/images/postgresql.jpg",
+    },
+    {
+        name: "tailwindcss",
+        link: "https://tailwindcss.com/",
+        image: "/images/tailwindcss.jpg",
+    },
+];
 
 const SkillsPage = () => {
     return (
@@ -10,9 +54,26 @@ const SkillsPage = () => {
             animate="visible"
             exit="exit"
         >
-            <h2 className="text-3xl md:text-5xl z-20 font-bold drop-shadow-md w-full">
-                SkillsPage
-            </h2>
+            <Container>
+                <div className="px-3 md:px-6 lg:px-11 mb-11">
+                    <h2 className="text-3xl mb-11 md:text-5xl z-20 font-bold drop-shadow-md w-full">
+                        Skills
+                    </h2>
+                    <div className="mt-11 grid grid-cols-2 gap-1 md:gap-2 lg:gap-3 md:grid-cols-3 lg:grid-cols-4">
+                        {skills.map((skill) => (
+                            <div
+                                key={skill.name}
+                                className="flex flex-col justify-center text-center capitalize bg-primary-dark p-3 rounded-none md:rounded-md"
+                            >
+                                <img src={skill.image} alt={skill.name} />
+                                <h3 className="text-3xl py-3 mb-3">
+                                    {skill.name}
+                                </h3>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </Container>
         </motion.div>
     );
 };

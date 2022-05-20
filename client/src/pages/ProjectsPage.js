@@ -64,10 +64,9 @@ const ProjectsPage = () => {
             initial="hidden"
             animate="visible"
             exit="exit"
-            className="px-3"
         >
             <Container>
-                <div className="px-0 md:px-6 lg:px-11 mb-11">
+                <div className="px-3 md:px-6 lg:px-11 mb-11">
                     <h2 className="text-3xl mb-11 md:text-5xl z-20 font-bold drop-shadow-md w-full">
                         Projects
                     </h2>

@@ -15,13 +15,17 @@ const socials = [
 ];
 const resources = [
     {
-        name: "javascript/mdn",
+        name: "javascript",
         link: "https://developer.mozilla.org/en-US/docs/Web/javascript",
     },
     { name: "react", link: "https://reactjs.org/" },
     {
         name: "redux",
         link: "https://redux.js.org/",
+    },
+    {
+        name: "node",
+        link: "https://nodejs.org/en/",
     },
     { name: "mysql", link: "https://www.mysql.com/" },
     {
