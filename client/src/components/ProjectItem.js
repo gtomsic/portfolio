@@ -12,6 +12,26 @@ const ProjectItem = ({ project }) => {
             <div className="description border-b border-b-light">
                 <h5 className="text-lg font-bold">Description</h5>
                 <div className="description py-2">{project.description}</div>
+                <div className="flex my-2">
+                    <a
+                        href={project.github}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="border border-light flex items-center text-white bg-dark hover:bg-secondary duration-300 p-1 px-3 m-2 rounded-full cursor-pointer"
+                    >
+                        <i className="fa-brands fa-github-square text-xl md:mr-2"></i>
+                        Github
+                    </a>
+                    <a
+                        href={project.live}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="border border-light flex items-center text-white bg-primary hover:bg-secondary duration-300 p-1 px-3 m-2 rounded-full cursor-pointer"
+                    >
+                        <i className="fa-solid fa-display md:mr-2"></i>
+                        Live View
+                    </a>
+                </div>
             </div>
             <div className="images border-b border-b-light">
                 <h5 className="text-lg font-bold">Images</h5>
@@ -31,12 +51,12 @@ const ProjectItem = ({ project }) => {
                     ))}
                 </div>
             </div>
-            <div className="flex justify-between p-3">
+            <div className="flex p-3">
                 <div className="flex">
                     <button className="border border-light flex items-center text-white bg-primary hover:bg-secondary duration-300 p-1 px-3 m-2 rounded-full">
                         {project.comments.length}
                         <i className="fa-solid fa-comment-dots ml-2 md:mx-2"></i>
-                        <span className="hidden md:inline-block">Comments</span>
+                        Comments
                     </button>
                     <motion.button
                         variants={pulse}
@@ -44,30 +64,8 @@ const ProjectItem = ({ project }) => {
                     >
                         {project.loves.length}
                         <i className="fa-solid fa-heart ml-2 md:mx-2"></i>
-                        <span className="hidden md:inline-block">Loves</span>
+                        Loves
                     </motion.button>
-                </div>
-                <div className="flex">
-                    <a
-                        href={project.github}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="border border-light flex items-center text-white bg-dark hover:bg-secondary duration-300 p-1 px-3 m-2 rounded-full cursor-pointer"
-                    >
-                        <i className="fa-brands fa-github-square text-xl md:mr-2"></i>
-                        <span className="hidden md:inline-block">Github</span>
-                    </a>
-                    <a
-                        href={project.live}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="border border-light flex items-center text-white bg-primary hover:bg-secondary duration-300 p-1 px-3 m-2 rounded-full cursor-pointer"
-                    >
-                        <i className="fa-solid fa-display md:mr-2"></i>
-                        <span className="hidden md:inline-block">
-                            Live View
-                        </span>
-                    </a>
                 </div>
             </div>
         </motion.div>

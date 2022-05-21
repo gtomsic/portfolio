@@ -11,7 +11,7 @@ import {
     pulse,
     container,
     showDelay,
-    zoomOutIn,
+    dropFromTop,
     fromLeft,
 } from "../utils/animation";
 import Container from "../components/Container";
@@ -48,7 +48,7 @@ const HomePage = () => {
             <Container>
                 <div className="flex px-3 md:px-11 flex-col lg:flex-row">
                     <motion.div
-                        variants={fromLeft}
+                        variants={showDelay}
                         className="min-w-[300px] flex justify-center md:justify-start lg:justify-end"
                     >
                         <div className="overflow-hidden w-[200px] h-[200px] rounded-full mb-11 mr-0 md:rounded-md lg:h-[400px] lg:w-[300px] lg:rounded-md lg:mb-0 lg:mr-7 drop-shadow-lg border-4 border-white">
@@ -62,26 +62,17 @@ const HomePage = () => {
                     <div className="text-xl md:text-2xl ">
                         <h4 className="drop-shadow-md">Hi my name is</h4>
                         <motion.h1
-                            variants={showDelay}
+                            variants={fromLeft}
                             className="text-4xl md:text-5xl lg:text-7xl font-bold"
                         >
                             GABRIEL TOMSIC
                         </motion.h1>
-                        <div className="text-4xl md:text-5xl lg:text-7xl text-secondary drop-shadow-md font-bold flex">
-                            {"FULL STACK DEVELOPER"
-                                .split("")
-                                .map((letter, index) => (
-                                    <motion.div
-                                        variants={zoomOutIn}
-                                        key={index}
-                                        className={
-                                            letter === " " ? "mr-4 md:mr-7" : ""
-                                        }
-                                    >
-                                        {letter}
-                                    </motion.div>
-                                ))}
-                        </div>
+                        <motion.h1
+                            variants={dropFromTop}
+                            className="text-4xl md:text-5xl lg:text-7xl text-secondary drop-shadow-md font-bold flex"
+                        >
+                            FULL STACK DEVELOPER
+                        </motion.h1>
                         <h4 className="text-justify drop-shadow-md">
                             Using cutting edge frameworks like javascript,
                             react, redux, node, jsonwebtoken, bcryptjs, mysql,

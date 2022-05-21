@@ -58,7 +58,7 @@ const Navbar = ({ menuIsOpen, setMenuIsOpen }) => {
                                 : `py-1 px-5 rounded-full border-2 font-bold border-white hover:bg-secondary duration-300 w-full`
                         }
                     >
-                        Contacts
+                        Contact
                     </button>
                 </Link>
                 <Link to="/about" className="mx-1">
