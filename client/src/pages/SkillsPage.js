@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-import { container, hoverPulse } from "../utils/animation";
+import { container, zoomOutIn } from "../utils/animation";
 import Container from "../components/Container";
 
 const skills = [
@@ -56,19 +56,18 @@ const SkillsPage = () => {
             exit="exit"
         >
             <Container>
-                <div className="px-3 md:px-6 lg:px-11 mb-11">
+                <div className="px-3 md:px-6 lg:px-11 mb-40">
                     <h2 className="text-3xl mb-11 md:text-5xl z-20 font-bold drop-shadow-md w-full">
                         Skills
                     </h2>
                     <div className="mt-11 grid grid-cols-2 gap-1 md:gap-2 lg:gap-3 md:grid-cols-3 lg:grid-cols-4">
-                        {skills.map((skill) => (
+                        {skills.map((skill, index) => (
                             <motion.a
                                 href={skill.link}
                                 target="_blank"
                                 rel="noreferrer"
-                                variants={hoverPulse}
-                                whileHover="hover"
-                                key={skill.name}
+                                key={index}
+                                variants={zoomOutIn}
                                 className="flex flex-col justify-center text-center capitalize bg-primary-dark p-3 rounded-none md:rounded-md cursor-pointer"
                             >
                                 <img
@@ -76,7 +75,7 @@ const SkillsPage = () => {
                                     alt={skill.name}
                                     className="cursor-pointer"
                                 />
-                                <h3 className="text-2xl md:text-3xl py-3 mb-3">
+                                <h3 className="text-2xl md:text-3xl pt-6 mb-3">
                                     {skill.name}
                                 </h3>
                             </motion.a>

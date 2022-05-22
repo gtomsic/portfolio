@@ -17,7 +17,7 @@ const ProjectItem = ({ project }) => {
                         href={project.github}
                         target="_blank"
                         rel="noreferrer"
-                        className="border border-light flex items-center text-white bg-dark hover:bg-secondary duration-300 p-1 px-3 m-2 rounded-full cursor-pointer"
+                        className="border border-light flex items-center text-white bg-dark hover:bg-secondary duration-300 p-1 px-3 m-2 rounded-md cursor-pointer"
                     >
                         <i className="fa-brands fa-github-square text-xl md:mr-2"></i>
                         Github
@@ -26,7 +26,7 @@ const ProjectItem = ({ project }) => {
                         href={project.live}
                         target="_blank"
                         rel="noreferrer"
-                        className="border border-light flex items-center text-white bg-primary hover:bg-secondary duration-300 p-1 px-3 m-2 rounded-full cursor-pointer"
+                        className="border border-light flex items-center text-white bg-primary hover:bg-secondary duration-300 p-1 px-3 m-2 rounded-md cursor-pointer"
                     >
                         <i className="fa-solid fa-display md:mr-2"></i>
                         Live View
@@ -53,14 +53,14 @@ const ProjectItem = ({ project }) => {
             </div>
             <div className="flex p-3">
                 <div className="flex">
-                    <button className="border border-light flex items-center text-white bg-primary hover:bg-secondary duration-300 p-1 px-3 m-2 rounded-full">
+                    <button className="border border-light flex items-center text-white bg-primary hover:bg-secondary duration-300 p-1 px-3 m-2 rounded-md">
                         {project.comments.length}
                         <i className="fa-solid fa-comment-dots ml-2 md:mx-2"></i>
                         Comments
                     </button>
                     <motion.button
                         variants={pulse}
-                        className="border border-light flex items-center text-white bg-danger hover:bg-secondary duration-300 p-1 px-3 m-2 rounded-full"
+                        className="border border-light flex items-center text-white bg-danger hover:bg-secondary duration-300 p-1 px-3 m-2 rounded-md"
                     >
                         {project.loves.length}
                         <i className="fa-solid fa-heart ml-2 md:mx-2"></i>

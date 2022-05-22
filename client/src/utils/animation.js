@@ -26,10 +26,10 @@ export const container = {
 
 export const pulse = {
     visible: {
-        scale: 1.3,
-        boxShadow: "2px 2px 10px rgb(255, 255, 255)",
+        scale: [1, 1.05, 1],
+        textShadow: "2px 2px 6px rgb(255, 255, 255)",
         transition: {
-            duration: 1,
+            duration: 3,
             repeat: Infinity,
             ease: "easeOut",
         },
@@ -167,8 +167,8 @@ export const zoomOutIn = {
         transition: {
             ease: "easeInOut",
             when: "beforeChildren",
-            staggerChildren: 0.1,
-            duration: 0.1,
+            staggerChildren: 0.025,
+            duration: 0.5,
         },
     },
 };

@@ -59,11 +59,16 @@ const ContactPage = () => {
                             <div>
                                 <div className=" py-3">
                                     <h4 className="text-xl font-bold">
-                                        Attention!
+                                        Hi there!
                                     </h4>
                                 </div>
                                 <div className="description py-2">
-                                    Not interested in any staffing company.
+                                    I'm only interested in direct hiring
+                                    company.
+                                </div>
+                                <div className="description py-2">
+                                    What are you waiting for fill up the form
+                                    and let's work together.
                                 </div>
                                 {/* Message Animation */}
                                 {loading ? (

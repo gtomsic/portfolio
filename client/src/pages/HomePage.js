@@ -11,8 +11,8 @@ import {
     pulse,
     container,
     showDelay,
-    dropFromTop,
-    fromLeft,
+    zoomIn,
+    zoomOutIn,
 } from "../utils/animation";
 import Container from "../components/Container";
 import RightFeatureProject from "../components/RightFeatureProject";
@@ -62,14 +62,14 @@ const HomePage = () => {
                     <div className="text-xl md:text-2xl ">
                         <h4 className="drop-shadow-md">Hi my name is</h4>
                         <motion.h1
-                            variants={fromLeft}
-                            className="text-4xl md:text-5xl lg:text-7xl font-bold"
+                            variants={zoomOutIn}
+                            className="text-2xl md:text-5xl lg:text-7xl font-bold"
                         >
                             GABRIEL TOMSIC
                         </motion.h1>
                         <motion.h1
-                            variants={dropFromTop}
-                            className="text-4xl md:text-5xl lg:text-7xl text-secondary drop-shadow-md font-bold flex"
+                            variants={pulse}
+                            className="text-2xl md:text-5xl lg:text-7xl text-secondary drop-shadow-md font-bold"
                         >
                             FULL STACK DEVELOPER
                         </motion.h1>
@@ -91,16 +91,19 @@ const HomePage = () => {
                                 className="flex-1 md:flex-none"
                             >
                                 <motion.button
-                                    variants={pulse}
-                                    className="w-full md:w-auto bg-secondary font-bold rounded-full py-3 md:py-5 px-11 m-0 md:m-2 lg:m-4 border-4 border-white hover:bg-primary duration-500"
+                                    variants={zoomIn}
+                                    className="w-full md:w-auto bg-secondary font-bold rounded-md py-3 md:py-5 px-11 m-0 md:m-2 lg:m-4 border-4 border-white hover:bg-primary duration-500"
                                 >
                                     View My Work
                                 </motion.button>
                             </Link>
                             <Link to="/contact" className="flex-1 md:flex-none">
-                                <button className="w-full md:w-auto bg-primary font-bold rounded-full py-3 md:py-5 px-11 m-0 md:m-2 lg:m-4 border-4 border-white hover:bg-secondary duration-500">
+                                <motion.button
+                                    variants={zoomIn}
+                                    className="w-full md:w-auto bg-primary font-bold rounded-md py-3 md:py-5 px-11 m-0 md:m-2 lg:m-4 border-4 border-white hover:bg-secondary duration-500"
+                                >
                                     Contact Me
-                                </button>
+                                </motion.button>
                             </Link>
                         </div>
                     </div>

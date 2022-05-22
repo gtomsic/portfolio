@@ -17,7 +17,7 @@ module.exports = {
         let info = await transporter.sendMail({
             from: `${name} <${email}>`, // sender address
             to: process.env.MAIL_USER, // list of receivers
-            subject: `${name} | ${company}`, // Subject line
+            subject: `${company} | gabrieltomsic.com`, // Subject line
             html: `<p>${message}</p>`, // html body
         });
 
