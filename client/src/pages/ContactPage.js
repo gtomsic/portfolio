@@ -1,17 +1,40 @@
 import React from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { motion } from "framer-motion";
 
 import { container } from "../utils/animation";
 import Container from "../components/Container";
 
+import { actionSendMessage } from "../store/actions/actionsMessage";
+import MessageAnimation from "../components/MessageAnimation";
+import Modal from "../components/Modal";
+
 const ContactPage = () => {
+    const [isOpen, setIsOpen] = React.useState(false);
     const [name, setName] = React.useState("");
     const [company, setCompany] = React.useState("");
     const [email, setEmail] = React.useState("");
     const [message, setMessage] = React.useState("");
+    const dispatch = useDispatch();
+    const {
+        loading,
+        message: send,
+        error,
+    } = useSelector((state) => state.message);
+
+    React.useEffect(() => {
+        if (send?.name) {
+            cancelButtonHandler();
+        }
+        if (loading) {
+            setIsOpen(true);
+        }
+    }, [send, loading]);
+
     const messageSubmitHandler = (e) => {
         e.preventDefault();
-        console.log({ name, company, email, message });
+        const data = { name, company, email, message };
+        dispatch(actionSendMessage(data));
     };
     const cancelButtonHandler = () => {
         setName("");
@@ -42,6 +65,34 @@ const ContactPage = () => {
                                 <div className="description py-2">
                                     Not interested in any staffing company.
                                 </div>
+                                {/* Message Animation */}
+                                {loading ? (
+                                    <MessageAnimation color="text-white" />
+                                ) : error ? (
+                                    <div>Message failed try again later</div>
+                                ) : (
+                                    send?.name && (
+                                        <div className="mt-11 p-5 bg-white text-dark drop-shadow-lg mr-0 md:mr-3 rounded-lg md:rounded-2xl">
+                                            <h3 className="text-2xl">
+                                                Hi {send?.name}
+                                            </h3>
+                                            <div className="text-xl">
+                                                Your message is successfully
+                                                send.
+                                            </div>
+                                            <p className="text-xl">
+                                                I will get back to you soon as
+                                                possible.
+                                            </p>
+                                            <div className="mt-8">
+                                                <div className="text-xl">
+                                                    <p>Best regards</p>
+                                                    <p>Gabriel Tomsic</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    )
+                                )}
                             </div>
                             <div>
                                 <div className="py-3">
@@ -55,6 +106,7 @@ const ContactPage = () => {
                                 >
                                     <div className="grid grid-cols-1 my-2">
                                         <input
+                                            required
                                             value={name}
                                             onChange={(e) =>
                                                 setName(e.target.value)
@@ -67,6 +119,7 @@ const ContactPage = () => {
                                     </div>
                                     <div className="grid grid-cols-1 my-2">
                                         <input
+                                            required
                                             value={company}
                                             onChange={(e) =>
                                                 setCompany(e.target.value)
@@ -79,6 +132,7 @@ const ContactPage = () => {
                                     </div>
                                     <div className="grid grid-cols-1 my-2">
                                         <input
+                                            required
                                             value={email}
                                             onChange={(e) =>
                                                 setEmail(e.target.value)
@@ -91,6 +145,7 @@ const ContactPage = () => {
                                     </div>
                                     <div className="grid grid-cols-1 my-2">
                                         <textarea
+                                            required
                                             value={message}
                                             onChange={(e) =>
                                                 setMessage(e.target.value)
@@ -104,12 +159,14 @@ const ContactPage = () => {
                                     </div>
                                     <div className="grid grid-cols-2 my-2 gap-2">
                                         <button
+                                            disabled={loading}
                                             type="submit"
-                                            className="py-2 bg-secondary hover:bg-primary duration-300 rounded-md border-2 border-white text-xl font-bold"
+                                            className="py-2 bg-primary hover:bg-primary-dark duration-300 rounded-md border-2 border-white text-xl font-bold"
                                         >
                                             Submit
                                         </button>
                                         <button
+                                            disabled={loading}
                                             onClick={cancelButtonHandler}
                                             type="button"
                                             className="py-2 bg-dark hover:bg-secondary duration-300 rounded-md border-2 border-white text-xl font-bold"
@@ -123,6 +180,45 @@ const ContactPage = () => {
                     </div>
                 </div>
             </Container>
+            <Modal
+                isOpen={isOpen}
+                setIsOpen={!loading ? setIsOpen : () => null}
+            >
+                {loading ? (
+                    <MessageAnimation color="text-dark drop-shadow-md" />
+                ) : error ? (
+                    <div>Message failed try again later</div>
+                ) : (
+                    send?.name && (
+                        <div className="text-dark drop-shadow-md">
+                            <h3 className="text-2xl">Hi {send?.name}</h3>
+                            <div className="text-xl">
+                                Your message is successfully send.
+                            </div>
+                            <p className="text-xl">
+                                I will get back to you soon as possible.
+                            </p>
+                            <div className="mt-8">
+                                <div className="text-xl">
+                                    <p>Best regards</p>
+                                    <p>Gabriel Tomsic</p>
+                                </div>
+                            </div>
+                        </div>
+                    )
+                )}
+                {!loading && (
+                    <button
+                        onClick={(e) => {
+                            e.preventDefault();
+                            setIsOpen(!isOpen);
+                        }}
+                        className="rounded-md drop-shadow-md py-1 px-8 mt-8 flex justify-center items-center bg-primary text-white"
+                    >
+                        Okay
+                    </button>
+                )}
+            </Modal>
         </motion.div>
     );
 };

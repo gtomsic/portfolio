@@ -57,7 +57,7 @@ export const showDelay = {
         y: 0,
         transition: {
             ease: "easeIn",
-            duration: 1,
+            duration: 0.5,
         },
     },
 };
@@ -169,6 +169,24 @@ export const zoomOutIn = {
             when: "beforeChildren",
             staggerChildren: 0.1,
             duration: 0.1,
+        },
+    },
+};
+
+export const sendEmail = {
+    visible: {
+        x: [0, 185],
+        y: [0, -50, 0],
+        transition: {
+            x: {
+                repeat: Infinity,
+                duration: 1,
+            },
+            y: {
+                repeat: Infinity,
+                duration: 1,
+                ease: "easeOut",
+            },
         },
     },
 };

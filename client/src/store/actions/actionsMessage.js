@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios from "../../apis/axios";
 import {
     SEND_MESSAGE_FAILED,
     SEND_MESSAGE_REQUEST,
@@ -15,12 +15,15 @@ export const actionSendMessage =
     (dataMessage) => async (dispatch, getState) => {
         try {
             dispatch({ type: SEND_MESSAGE_REQUEST });
-            const { data } = await axios("/api/message", dataMessage, config);
+            const { data } = await axios.post(
+                "/api/message",
+                dataMessage,
+                config
+            );
             if (data) {
-                console.log(data);
                 dispatch({ type: SEND_MESSAGE_SUCCESS, payload: data });
             }
         } catch (error) {
-            dispatch({ type: SEND_MESSAGE_FAILED });
+            dispatch({ type: SEND_MESSAGE_FAILED, error: error });
         }
     };
