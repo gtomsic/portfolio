@@ -78,7 +78,7 @@ const AboutPage = () => {
                             environment.
                         </div>
 
-                        <div className="mt-7 ml-11 mb-11 flex">
+                        <div className="mt-7 ml-11 mb-40 flex">
                             <Link to="/contact">
                                 <motion.button
                                     variants={pulse}

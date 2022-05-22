@@ -61,7 +61,7 @@ const MobileMenu = ({ setMenuIsOpen }) => {
                         About
                     </button>
                 </Link>
-                <Link to="/" className="mx-4">
+                <Link to="/login" className="mx-4">
                     <button
                         onClick={() => setMenuIsOpen(false)}
                         className="py-3 lg:py-1 px-5 rounded-full border-2 border-white font-bold bg-primary hover:bg-secondary duration-300 w-full"

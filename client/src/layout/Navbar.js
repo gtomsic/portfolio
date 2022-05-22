@@ -75,7 +75,7 @@ const Navbar = ({ menuIsOpen, setMenuIsOpen }) => {
                 <div className="mx-5 hidden md:flex md:items-center text-xl font-bold">
                     <span>|</span>
                 </div>
-                <Link to="/">
+                <Link to="/login">
                     <button className="py-1 px-5 rounded-full border-2 border-white w-full bg-secondary hover:bg-primary duration-300 font-bold">
                         Login
                     </button>

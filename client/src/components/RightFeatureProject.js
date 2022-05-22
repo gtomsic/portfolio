@@ -3,14 +3,14 @@ import React from "react";
 const RightFeatureProject = ({ project }) => {
     return (
         <div className="relative min-h-[500px] md:min-h-[1000px] lg:min-h-[1300px] md:pb-[100px]">
-            <h2 className="text-3xl text-right text-primary md:text-5xl z-20 font-bold block lg:absolute drop-shadow-md w-full">
+            <h2 className="text-3xl text-left md:text-right text-primary md:text-5xl z-20 font-bold block lg:absolute drop-shadow-md w-full">
                 {project.title}
             </h2>
             <div className="w-[100%] mt-11  lg:right-0 lg:w-[50%] lg:mt-[100px] z-20 block lg:absolute md:py-8 md:px-6 md:bg-primary-dark rounded-lg md:drop-shadow-md">
                 <h3 className="text-xl md:text-3xl text-left text-gray font-bold md:text-light">
                     {project.description}
                 </h3>
-                <div className="mt-7 flex justify-end">
+                <div className="mt-7 flex justify-start md:justify-end">
                     <a
                         href={project.github}
                         target="_blank"
