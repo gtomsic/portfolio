@@ -72,7 +72,7 @@ const ContactPage = () => {
                                     <div>Message failed try again later</div>
                                 ) : (
                                     send?.name && (
-                                        <div className="mt-11 p-5 bg-white text-dark drop-shadow-lg mr-0 md:mr-3 rounded-lg md:rounded-2xl">
+                                        <div className="my-11 p-5 bg-white text-dark drop-shadow-lg mr-0 md:mr-3 rounded-lg md:rounded-2xl">
                                             <h3 className="text-2xl">
                                                 Hi {send?.name}
                                             </h3>
