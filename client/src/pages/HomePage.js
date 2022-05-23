@@ -119,7 +119,7 @@ const HomePage = () => {
                     return (
                         <div
                             key={project.id}
-                            className="bg-white py-[80px] md:py-[150px] px-3 md:px-11 text-center"
+                            className="bg-gray-dark py-[80px] md:py-[150px] px-3 md:px-11 text-center"
                         >
                             <RightFeatureProject project={project} />
                         </div>

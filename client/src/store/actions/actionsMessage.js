@@ -1,4 +1,4 @@
-import axios from "../../apis/axios";
+import axios from "axios";
 import {
     SEND_MESSAGE_FAILED,
     SEND_MESSAGE_REQUEST,

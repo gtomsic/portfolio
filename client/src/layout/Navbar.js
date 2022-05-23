@@ -10,8 +10,8 @@ const Navbar = ({ menuIsOpen, setMenuIsOpen }) => {
                     <button
                         className={
                             location.pathname === "/"
-                                ? `py-1 px-5 rounded-md drop-shadow-md font-bold bg-primary text-white hover:bg-secondary duration-300 w-full`
-                                : `py-1 px-5 rounded-md font-bold hover:bg-secondary duration-300 w-full`
+                                ? `py-1 px-5 rounded-md drop-shadow-md font-bold bg-primary text-white hover:bg-primary duration-300 w-full`
+                                : `py-1 px-5 rounded-md font-bold hover:bg-primary duration-300 w-full`
                         }
                     >
                         Home
@@ -21,8 +21,8 @@ const Navbar = ({ menuIsOpen, setMenuIsOpen }) => {
                     <button
                         className={
                             location.pathname === "/projects"
-                                ? `py-1 px-5 rounded-md drop-shadow-md font-bold bg-primary text-white hover:bg-secondary duration-300 w-full`
-                                : `py-1 px-5 rounded-md font-bold hover:bg-secondary duration-300 w-full`
+                                ? `py-1 px-5 rounded-md drop-shadow-md font-bold bg-primary text-white hover:bg-primary duration-300 w-full`
+                                : `py-1 px-5 rounded-md font-bold hover:bg-primary duration-300 w-full`
                         }
                     >
                         Projects
@@ -32,8 +32,8 @@ const Navbar = ({ menuIsOpen, setMenuIsOpen }) => {
                     <button
                         className={
                             location.pathname === "/blog"
-                                ? `py-1 px-5 rounded-md drop-shadow-md font-bold bg-primary text-white hover:bg-secondary duration-300 w-full`
-                                : `py-1 px-5 rounded-md font-bold hover:bg-secondary duration-300 w-full`
+                                ? `py-1 px-5 rounded-md drop-shadow-md font-bold bg-primary text-white hover:bg-primary duration-300 w-full`
+                                : `py-1 px-5 rounded-md font-bold hover:bg-primary duration-300 w-full`
                         }
                     >
                         Blogs
@@ -43,8 +43,8 @@ const Navbar = ({ menuIsOpen, setMenuIsOpen }) => {
                     <button
                         className={
                             location.pathname === "/skills"
-                                ? `py-1 px-5 rounded-md drop-shadow-md font-bold bg-primary text-white hover:bg-secondary duration-300 w-full`
-                                : `py-1 px-5 rounded-md font-bold hover:bg-secondary duration-300 w-full`
+                                ? `py-1 px-5 rounded-md drop-shadow-md font-bold bg-primary text-white hover:bg-primary duration-300 w-full`
+                                : `py-1 px-5 rounded-md font-bold hover:bg-primary duration-300 w-full`
                         }
                     >
                         Skills
@@ -54,8 +54,8 @@ const Navbar = ({ menuIsOpen, setMenuIsOpen }) => {
                     <button
                         className={
                             location.pathname === "/contact"
-                                ? `py-1 px-5 rounded-md drop-shadow-md font-bold bg-primary text-white hover:bg-secondary duration-300 w-full`
-                                : `py-1 px-5 rounded-md font-bold hover:bg-secondary duration-300 w-full`
+                                ? `py-1 px-5 rounded-md drop-shadow-md font-bold bg-primary text-white hover:bg-primary duration-300 w-full`
+                                : `py-1 px-5 rounded-md font-bold hover:bg-primary duration-300 w-full`
                         }
                     >
                         Contact
@@ -65,8 +65,8 @@ const Navbar = ({ menuIsOpen, setMenuIsOpen }) => {
                     <button
                         className={
                             location.pathname === "/about"
-                                ? `py-1 px-5 rounded-md drop-shadow-md font-bold bg-primary text-white hover:bg-secondary duration-300 w-full`
-                                : `py-1 px-5 rounded-md font-bold hover:bg-secondary duration-300 w-full`
+                                ? `py-1 px-5 rounded-md drop-shadow-md font-bold bg-primary text-white hover:bg-primary duration-300 w-full`
+                                : `py-1 px-5 rounded-md font-bold hover:bg-primary duration-300 w-full`
                         }
                     >
                         About

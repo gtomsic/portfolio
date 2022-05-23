@@ -7,7 +7,7 @@ const RightFeatureProject = ({ project }) => {
                 {project.title}
             </h2>
             <div className="w-[100%] self-end mt-11  lg:right-0 lg:w-[50%] lg:mt-[100px] md:py-8 md:px-6 md:bg-primary-dark rounded-lg md:drop-shadow-md">
-                <h3 className="text-xl md:text-3xl text-left text-gray font-bold md:text-light">
+                <h3 className="text-xl md:text-3xl text-left font-bold">
                     {project.description}
                 </h3>
                 <div className="mt-7 flex justify-start md:justify-end">
