@@ -85,11 +85,7 @@ const Navbar = ({ menuIsOpen, setMenuIsOpen }) => {
                 onClick={() => setMenuIsOpen(!menuIsOpen)}
                 className="w-8 h-8 flex z-50 justify-center items-center rounded-md border-2 border-light lg:hidden outline-none"
             >
-                {menuIsOpen ? (
-                    <i className="fa-solid fa-xmark"></i>
-                ) : (
-                    <i className="fa-solid fa-bars"></i>
-                )}
+                <i className="fa-solid fa-bars"></i>
             </button>
         </div>
     );

@@ -25,7 +25,7 @@ const App = () => {
                     <Route path="/skills" element={<SkillsPage />} />
                     <Route path="/blog" element={<BlogPage />} />
                     <Route path="/login" element={<Login />} />
-                    <Route path="/dashboard" element={<Dashboard />} />
+                    <Route path="/admin" element={<Dashboard />}></Route>
                 </Route>
             </Routes>
         </AnimatePresence>

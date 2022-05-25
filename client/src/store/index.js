@@ -1,10 +1,13 @@
 import { createStore, combineReducers, applyMiddleware } from "redux";
 import { composeWithDevTools } from "redux-devtools-extension";
 import thunk from "redux-thunk";
-import { reducerSendMessage } from "./reducers/reducerMessage";
+import {
+    reducerSendMessage,
+    reducerUserLogin,
+} from "./reducers/reducerMessage";
 
 const reducers = combineReducers({
-    replaceMe: () => "I am state",
+    login: reducerUserLogin,
     message: reducerSendMessage,
 });
 

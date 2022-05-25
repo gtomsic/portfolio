@@ -50,11 +50,9 @@ export const hoverPulse = {
 export const showDelay = {
     hidden: {
         opacity: 0,
-        y: 40,
     },
     visible: {
         opacity: 1,
-        y: 0,
         transition: {
             ease: "easeIn",
             duration: 0.5,

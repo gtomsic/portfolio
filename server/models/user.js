@@ -12,11 +12,11 @@ module.exports = (sequeqlize, DataTypes) => {
             type: DataTypes.STRING,
             allowNull: false,
         },
-        password: {
+        email: {
             type: DataTypes.STRING,
             allowNull: false,
         },
-        secret: {
+        password: {
             type: DataTypes.STRING,
             allowNull: false,
         },

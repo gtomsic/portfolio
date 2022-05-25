@@ -1,6 +1,6 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
-import MobileMenu from "../components/MobileMenu";
+import RightDrawer from "./RightDrawer";
 import Footer from "./Footer";
 import Header from "./Header";
 
@@ -9,9 +9,9 @@ const MainLayout = () => {
     return (
         <div>
             {menuIsOpen && (
-                <MobileMenu
-                    setMenuIsOpen={() => setMenuIsOpen(!menuIsOpen)}
-                    menuIsOpen={menuIsOpen}
+                <RightDrawer
+                    setIsOpen={() => setMenuIsOpen(!menuIsOpen)}
+                    isOpen={menuIsOpen}
                 />
             )}
             <Header
