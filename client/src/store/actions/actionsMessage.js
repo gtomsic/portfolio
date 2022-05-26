@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios from "../../apis/axios";
 import {
     SEND_MESSAGE_FAILED,
     SEND_MESSAGE_REQUEST,
@@ -22,9 +22,10 @@ export const actionUserLogin = (userData) => async (dispatch, getState) => {
         const { data } = await axios.post("/api/users/login", userData, config);
         if (data) {
             dispatch({ type: USER_LOGIN_SUCCESS, payload: data });
+            localStorage.setItem("login", JSON.stringify(data));
         }
     } catch (error) {
-        dispatch({ type: USER_LOGIN_FAILED, error: error });
+        dispatch({ type: USER_LOGIN_FAILED, payload: error.message });
     }
 };
 

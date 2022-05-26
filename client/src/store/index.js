@@ -11,7 +11,13 @@ const reducers = combineReducers({
     message: reducerSendMessage,
 });
 
-const initialState = {};
+const login = localStorage.getItem("login")
+    ? JSON.parse(localStorage.getItem("login"))
+    : {};
+
+const initialState = {
+    login: { user: login },
+};
 
 const middleware = [thunk];
 

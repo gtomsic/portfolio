@@ -22,7 +22,10 @@ const Login = () => {
             setPassword("");
             setSecret("");
         }
-    }, [user, navigate]);
+        if (error) {
+            console.log(error);
+        }
+    }, [user, error, navigate]);
     const loginUserHandler = (e) => {
         e.preventDefault();
         const data = { username, password, secret };
@@ -97,6 +100,10 @@ const Login = () => {
                                         <button className="p-3 mt-4 bg-primary rounded-md font-bold">
                                             Login
                                         </button>
+                                    </div>
+                                    <div className="text-danger mt-4">
+                                        {error &&
+                                            `Username password or secret key don't match please try again.`}
                                     </div>
                                 </>
                             )}

@@ -1,7 +1,7 @@
 import React from "react";
 
 import { motion } from "framer-motion";
-import { pulse, rightZoomIn, showDelay } from "../utils/animation";
+import { pulse, rightZoomIn } from "../utils/animation";
 
 const ProjectItem = ({ project }) => {
     return (
@@ -37,8 +37,7 @@ const ProjectItem = ({ project }) => {
                 <h5 className="text-lg font-bold">Images</h5>
                 <div className="images py-2 grid gap-1 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
                     {project?.images?.map((image) => (
-                        <motion.div
-                            variants={showDelay}
+                        <div
                             key={image.id}
                             className="flex justify-center overflow-hidden"
                         >
@@ -47,7 +46,7 @@ const ProjectItem = ({ project }) => {
                                 alt="awrow"
                                 className="w-100%"
                             />
-                        </motion.div>
+                        </div>
                     ))}
                 </div>
             </div>

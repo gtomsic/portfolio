@@ -50,7 +50,7 @@ const Footer = () => {
                     <div>
                         <h3 className="text-2xl  pt-11">Social Links</h3>
                         <div className="inline-block">
-                            <ul className="mt-3 text-primary text-left">
+                            <ul className="mt-3 text-gray text-left">
                                 {socials.map((social) => (
                                     <li key={social.name} className="py-1">
                                         <a
@@ -68,7 +68,7 @@ const Footer = () => {
                     <div>
                         <h3 className="text-2xl  pt-11">Resources</h3>
                         <div className="inline-block">
-                            <ul className="mt-3 text-primary text-left">
+                            <ul className="mt-3 text-gray text-left">
                                 {resources.map((social) => (
                                     <li key={social.name} className="py-1">
                                         <a
@@ -84,11 +84,9 @@ const Footer = () => {
                         </div>
                     </div>
                     <div>
-                        <h3 className="text-2xl  pt-11">
-                            &copy; 2022 Copy Rights
-                        </h3>
+                        <h3 className="text-2xl  pt-11">&copy; Copy Rights</h3>
                         <div className="inline-block">
-                            <ul className="mt-3 text-primary text-left">
+                            <ul className="mt-3 text-gray text-left">
                                 <li>www.gabrieltomsic.com</li>
                                 <li>Dev By: Gabriel Tomsic</li>
                             </ul>

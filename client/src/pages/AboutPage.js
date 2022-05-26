@@ -49,15 +49,14 @@ const AboutPage = () => {
                             web master and got accepted.
                         </div>
                         <div className="py-2">
-                            In 2016 I move in United States and got married to
-                            my husband. Then I realized all the knowledge I have
-                            been absolute, so I been enhancing my knowledge in
-                            Wed Development and started learning Javascript or
-                            Ecma Script. After that I continue to React and Node
-                            Mysql and Postgresql, following the convention in
-                            Resful API and MVC designed pattern as a full stack
-                            developer. Then got hookup with SASS/SCSS Axios and
-                            Jsonwebtoken, Bcryptjs for application security.
+                            In 2016 I move in United States and start learning
+                            enhancing my knowledge in Wed Development like
+                            Javascript or Ecma Script. After that I continue to
+                            React and Node Mysql and Postgresql, following the
+                            convention in Resful API and MVC designed pattern in
+                            full stack development. Then got hookup with
+                            SASS/SCSS Axios and Jsonwebtoken, Bcryptjs for
+                            application security.
                         </div>
                         <div className="py-2">
                             After all those years of training and experience now

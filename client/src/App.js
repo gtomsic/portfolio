@@ -11,6 +11,7 @@ import ProjectsPage from "./pages/ProjectsPage";
 import SkillsPage from "./pages/SkillsPage";
 import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
+import DashboardHome from "./pages/DashboardHome";
 
 const App = () => {
     const location = useLocation();
@@ -25,7 +26,9 @@ const App = () => {
                     <Route path="/skills" element={<SkillsPage />} />
                     <Route path="/blog" element={<BlogPage />} />
                     <Route path="/login" element={<Login />} />
-                    <Route path="/admin" element={<Dashboard />}></Route>
+                    <Route path="/admin" element={<Dashboard />}>
+                        <Route path="/admin" element={<DashboardHome />} />
+                    </Route>
                 </Route>
             </Routes>
         </AnimatePresence>

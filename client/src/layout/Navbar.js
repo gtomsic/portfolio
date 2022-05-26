@@ -1,8 +1,10 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import { Link, useLocation } from "react-router-dom";
 
 const Navbar = ({ menuIsOpen, setMenuIsOpen }) => {
     const location = useLocation();
+    const { user } = useSelector((state) => state.login);
     return (
         <div className="flex items-center">
             <div className="hidden lg:flex lg:visible">
@@ -75,11 +77,19 @@ const Navbar = ({ menuIsOpen, setMenuIsOpen }) => {
                 <div className="mx-5 hidden md:flex md:items-center text-xl font-bold">
                     <span>|</span>
                 </div>
-                <Link to="/login">
-                    <button className="py-1 px-5 drop-shadow-md bg-secondary rounded-md hover:bg-primary duration-300 font-bold">
-                        Login
-                    </button>
-                </Link>
+                {user?.id ? (
+                    <Link to="/admin">
+                        <button className="py-1 px-5 drop-shadow-md bg-accent rounded-md hover:bg-primary duration-300 font-bold">
+                            Dashboard
+                        </button>
+                    </Link>
+                ) : (
+                    <Link to="/login">
+                        <button className="py-1 px-5 drop-shadow-md bg-secondary rounded-md hover:bg-primary duration-300 font-bold">
+                            Login
+                        </button>
+                    </Link>
+                )}
             </div>
             <button
                 onClick={() => setMenuIsOpen(!menuIsOpen)}
