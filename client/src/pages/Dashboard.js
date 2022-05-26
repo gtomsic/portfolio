@@ -34,7 +34,7 @@ const Dashboard = () => {
                                 <h5>{`${user?.firstName} ${user?.lastName}`}</h5>
                             </div>
                         </div>
-                        <div className="w-full bg-secondary">
+                        <div className="w-full">
                             <Outlet />
                         </div>
                     </div>
