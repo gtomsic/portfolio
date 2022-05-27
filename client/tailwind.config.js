@@ -2,10 +2,10 @@ module.exports = {
     content: ["./src/**/*.{js,jsx,ts,tsx}"],
     theme: {
         colors: {
-            primary: " #0EA5E9",
-            "primary-dark": "#075985",
+            primary: " #013a63",
+            "primary-dark": "#012a4a",
             secondary: "#fdba74",
-            positive: "#38bdf8",
+            positive: "#014f86",
             accent: "#818cf8",
             warning: "#F97316",
             danger: "#ef4444",

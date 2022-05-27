@@ -3,7 +3,7 @@ import React from "react";
 const RightFeatureProject = ({ project }) => {
     return (
         <div className="relative flex flex-col">
-            <h2 className="text-3xl text-left md:text-right text-primary md:text-5xl z-20 font-bold block lg:absolute drop-shadow-md w-full">
+            <h2 className="text-3xl text-left md:text-right text-white md:text-5xl z-20 font-bold block lg:absolute drop-shadow-md w-full">
                 {project.title}
             </h2>
             <div className="w-[100%] self-end mt-11  lg:right-0 lg:w-[50%] lg:mt-[100px] md:py-8 md:px-6 md:bg-primary-dark rounded-lg md:drop-shadow-md">
